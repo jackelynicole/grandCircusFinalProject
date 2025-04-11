@@ -4,6 +4,7 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 import './App.css'
+import EventsTest from "./components/EventsTest"
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <h1>hello, world</h1>
+      <EventsTest />
       <div id='map-container' ref={mapContainerRef}/>
     </>
   )
