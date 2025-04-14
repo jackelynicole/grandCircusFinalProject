@@ -1,8 +1,9 @@
 import Event from "../interfaces/Event"
 import { useState, useEffect } from "react"
 import { getEvents } from "../services/eventService"
+import EventCard from "./EventCard"
 
-const EventsTest = () => {
+const Events = () => {
   const [events, setEvents] = useState<Event[]>([])
 
   useEffect(() => {
@@ -11,19 +12,14 @@ const EventsTest = () => {
 
   return (
     <div>
-      <h2>Event Test Output</h2>
-      <ul>
+      <h2 style={{ marginLeft: "15px" }}>Local Events</h2>
+      <div className='events-container'>
         {events.map((event, index) => (
-          <li key={index}>
-            <h4>{event.title}</h4>
-            <p>
-              {event.date} — {event.location}
-            </p>
-          </li>
+          <EventCard key={index} event={event} />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
 
-export default EventsTest
+export default Events
