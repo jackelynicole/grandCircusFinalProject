@@ -9,9 +9,9 @@ const BASE_URL = "https://serpapi.com/search"
 
 let eventsCache: Event[] | null = null
 
-export const fetchEvents = async (
-  location: string = "Detroit, MI",
-  distance: number = 25
+export const getEvents = async (
+  location: string,
+  distance: number
 ): Promise<Event[]> => {
   if (eventsCache) {
     console.log("Using cached events data")
@@ -19,7 +19,7 @@ export const fetchEvents = async (
   }
 
   try {
-    console.log("Fetching events from Serp API")
+    console.log("Getting events from Serp API")
     const response = await axios.get(BASE_URL, {
       params: {
         engine: "google_events",
@@ -69,7 +69,7 @@ export const fetchEvents = async (
 
     return mappedEvents
   } catch (error) {
-    console.error("Error fetching events from Serp API:", error)
+    console.error("Error getting events from Serp API:", error)
     throw error
   }
 }

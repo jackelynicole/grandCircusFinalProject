@@ -7,6 +7,7 @@ const Events = () => {
   const [events, setEvents] = useState<Event[]>([])
 
   useEffect(() => {
+    console.log("here")
     getEvents().then(es => setEvents(es))
   }, [])
 
