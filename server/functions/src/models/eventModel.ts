@@ -1,6 +1,10 @@
-import mongoose from "mongoose"
+import { Schema, model } from "mongoose"
 
-const EventSchema = new mongoose.Schema(
+//
+// NOTE: Use this model for storing any Serp API info to MongoDB
+//
+
+const EventSchema = new Schema(
   {
     title: {
       type: String,
@@ -38,6 +42,6 @@ const EventSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-const Event = mongoose.model("Event", EventSchema)
+const Event = model("Event", EventSchema)
 
 export default Event
