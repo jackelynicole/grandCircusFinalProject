@@ -1,90 +1,49 @@
 .event-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-
-.event-content {
-  position: relative;
-  overflow: hidden;
+.event-time {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 0 0;
+  color: #000;
 }
-
+.event-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  /* border-top-left-radius: 20px;
+border-top-right-radius: 20px; */
+}
 .event-details {
-  overflow: hidden;
+  padding: 0 16px 16px;
 }
-
 .event-title {
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 8px 0 4px;
 }
-
-.event-date-location {
-  color: #666;
-  margin-bottom: 12px;
-  font-size: 0.9rem;
-}
-
 .event-description {
   font-size: 0.9rem;
-  margin-bottom: 12px;
+  color: #444;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.event-vote {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 14px;
-}
-
-.vote-label {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #666;
-  margin-right: 8px;
-  letter-spacing: 0.5px;
-}
-
-.vote-button {
-  background: none;
-  border: 1px solid #ddd;
-  color: #28a745;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.vote-button:hover {
-  background-color: #f8f9fa;
-}
-
-@media screen and (max-width: 576px) {
-  .event-map-container {
-    float: none;
-    margin: 12px auto;
-    order: 2;
-  }
-  .event-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .event-details {
-    order: 1;
-  }
-}
+/* .events-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 20px;
+padding: 16px;
+} */

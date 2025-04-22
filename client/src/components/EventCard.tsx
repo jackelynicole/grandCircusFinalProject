@@ -10,21 +10,15 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   return (
     <div className='event-card'>
-      <div className='event-content'>
-        <EventMap location={event.location} />
-
-        <div className='event-details'>
-          <h3 className='event-title'>{event.title}</h3>
-          <p className='event-date-location'>
-            {event.date} — {event.location}
-          </p>
-          {event.description && (
-            <p className='event-description'>{event.description}</p>
-          )}
-          <div className='event-vote'>
-            <span className='vote-label'>VOTE</span>
-            <button className='vote-button'>+</button>
-          </div>
+      <div className='event-time'>{event.date}</div>
+      {event.imageUrl && (
+        <img src={event.imageUrl} alt={event.title} className='event-image' />
+      )}
+      <div className='event-details'>
+        <div className='event-title'>{event.title}</div>
+        <p className='event-description'>{event.description}</p>=
+        <div className='event-map-wrapper'>
+          <EventMap location={event.location} />
         </div>
       </div>
     </div>

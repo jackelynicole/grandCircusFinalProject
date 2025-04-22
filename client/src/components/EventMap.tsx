@@ -1,3 +1,4 @@
+// client/src/components/EventMap.tsx
 import { useRef, useEffect } from "react"
 import mapboxgl from "mapbox-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
@@ -26,10 +27,8 @@ const EventMap: React.FC<EventMapProps> = ({ location }) => {
 
   useEffect(() => {
     if (!mapContainerRef.current) return
-
     mapboxgl.accessToken =
       "pk.eyJ1IjoibGlnaHRuaW5nc3ByZWUiLCJhIjoiY205YzB0NnhlMG52ejJrcTJseWxhcXZhZiJ9.VFBHYF5wcCBw35HASKi_eA"
-
     const detroitCoordinates: [number, number] = [-83.0458, 42.3314]
 
     mapRef.current = new mapboxgl.Map({
