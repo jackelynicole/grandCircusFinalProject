@@ -8,7 +8,6 @@ export const getEvents: HTTPHandler = async (req, res) => {
     const distance = parseInt(req.query.distance as string) || 25
 
     const localEvents = await EventModel.find()
-
     const externalEvents = await getEventsFromService(location, distance)
 
     const combinedEvents = [...localEvents, ...externalEvents]

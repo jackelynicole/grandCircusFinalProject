@@ -32,7 +32,6 @@ export const getEvents = async (
     })
 
     const serpEvents = response.data.events_results || []
-
     const mappedEvents: Event[] = serpEvents.map((event: any) => {
       let eventDate = ""
       if (event.date) {
@@ -65,6 +64,7 @@ export const getEvents = async (
     })
 
     // Save to in-memory cache
+
     eventsCache = mappedEvents
 
     return mappedEvents
