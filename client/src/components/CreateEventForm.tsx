@@ -31,7 +31,7 @@ const CreateEventForm = () => {
   }
   return (
     <form onSubmit={handleSubmit} className='create-event-form'>
-      <h2>Create Local Event</h2>
+      <h3>Create Local Event</h3>
       <input
         name='title'
         placeholder='Title'
