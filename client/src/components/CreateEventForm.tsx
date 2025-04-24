@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { createEvent } from "../services/eventService"
 import Event from "../interfaces/Event"
+import "./CreateEventForm.css"
 const emptyEvent: Event = {
   title: "",
   description: "",
@@ -29,8 +30,8 @@ const CreateEventForm = () => {
     }
   }
   return (
-    <form onSubmit={handleSubmit} style={{ margin: "15px" }}>
-      <h3>Create Local Event</h3>
+    <form onSubmit={handleSubmit} className='create-event-form'>
+      <h2>Create Local Event</h2>
       <input
         name='title'
         placeholder='Title'

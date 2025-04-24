@@ -1,0 +1,50 @@
+.create-event-form {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 80%;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.create-event-form h3 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+.create-event-form input,
+.create-event-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.create-event-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.create-event-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.create-event-form button:hover {
+  background-color: #333;
+}

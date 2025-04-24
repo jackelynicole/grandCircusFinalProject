@@ -1,4 +1,3 @@
-// client/src/components/Events.tsx
 import Event from "../interfaces/Event"
 import { useState, useEffect } from "react"
 import { getEvents } from "../services/eventService"
@@ -11,7 +10,7 @@ const Events = () => {
   }, [])
   return (
     <div>
-      <h2 style={{ marginLeft: "15px" }}>Local Events</h2>
+      <h2>Events</h2>
       <div
         className='events-container'
         style={{
