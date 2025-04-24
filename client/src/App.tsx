@@ -16,8 +16,8 @@ const App = () => (
             path='/events'
             element={
               <>
-                <CreateEventForm />
                 <Events />
+                <CreateEventForm />
               </>
             }
           />

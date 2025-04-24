@@ -27,7 +27,7 @@
 .event-map-overlay p {
   margin: 0;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: auto;
   text-overflow: ellipsis;
   color: white;
   font-size: 0.75rem;
